@@ -1,4 +1,4 @@
-$color-primary: #fffefa;
+$color-primary: orange;
 $color-secondary: green;
 $color-tertiary: #00f;
 
@@ -7,7 +7,7 @@ $font-md: 30px;
 $font-sm: 20px;
 
 .nav {
-  background-color: $color-primary;
+  background-color: mix(blue, green, 70%);
 
   ul li {
     list-style: none;
@@ -63,4 +63,16 @@ $font-sm: 20px;
 
 .footer h3 {
   @extend .heading;
+}
+
+@function fontSize($size: 25px) {
+  @return $size * 2;
+}
+
+.banner p {
+  font-size: fontSize($font-sm);
+}
+
+.footer p {
+  font-size: fontSize(30px);
 }
