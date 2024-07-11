@@ -1,0 +1,80 @@
+@import "test";
+
+$color-primary: orange;
+$color-secondary: green;
+$color-tertiary: #00f;
+
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 20px;
+
+.nav {
+  background-color: mix(blue, green, 70%);
+
+  ul li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    font-size: $font-sm;
+    color: $color-secondary;
+
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+}
+
+// @mixin headingStyles($font-size: 50px) {
+//   font-size: $font-size;
+//   color: $color-secondary;
+//   text-align: center;
+// }
+
+// @mixin transition($param...) {
+//   transition: $param;
+// }
+
+// .banner h1 {
+//   @include headingStyles($font-lg);
+// }
+
+// .footer h3 {
+//   @include headingStyles($font-md);
+//   @include transition(color 0.5s, background-color 1s);
+//   &:hover {
+//     color: $color-tertiary;
+//     background-color: $color-primary;
+//   }
+// }
+
+%heading {
+  color: $color-primary;
+  font-size: $font-lg;
+  background-color: $color-secondary;
+  text-align: center;
+}
+
+h1 {
+  @extend %heading;
+
+  &:hover {
+    background-color: green;
+  }
+}
+
+.footer h3 {
+  @extend h1;
+}
+
+// @function fontSize($size: 25px) {
+//   @return $size * 2;
+// }
+
+// .banner p {
+//   font-size: fontSize($font-sm);
+// }
+
+// .footer p {
+//   font-size: fontSize(30px);
+// }
