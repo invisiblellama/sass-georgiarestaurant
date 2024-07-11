@@ -13,21 +13,15 @@
   color: #00f;
 }
 
-.banner h1 {
+.heading, .footer h3, .banner h1 {
+  color: #fffefa;
   font-size: 40px;
-  color: green;
+  background-color: green;
   text-align: center;
 }
 
-.footer h3 {
-  font-size: 30px;
-  color: green;
-  text-align: center;
-  transition: color 0.5s, background-color 1s;
-}
-.footer h3:hover {
-  color: #00f;
-  background-color: #fffefa;
+.banner h1:hover {
+  background-color: green;
 }
 
 /*# sourceMappingURL=main.css.map */
